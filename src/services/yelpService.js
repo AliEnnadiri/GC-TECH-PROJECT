@@ -26,7 +26,7 @@ const getActivities = async (location) => {
             name: activity.name,
             location: activity.location.address1, // Adresse 
             category: activity.categories[0]?.title || 'Unknown', // Catégorie 
-            imageUrl: activity.image_url || 'https://i.ytimg.com/vi/vO4AlT0bS-s/maxresdefault.jpg', // URL de l'image, ou une image par défaut si aucune n'est présente
+            imageUrl: activity.image_url || 'https://i.ytimg.com/vi/vO4AlT0bS-s/maxresdefault.jpg', // URL de l'image
         }));
 
         return activities;
