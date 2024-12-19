@@ -10,9 +10,9 @@ const getYelpActivities = async (location, term) => {
                 Authorization: `Bearer ${YELP_API_KEY}`,
             },
             params: {
-                location, // Ex : "Montpellier"
-                term,     // Ex : "activities" ou "restaurants"
-                limit: 10, // Limite des résultats (modifiable selon besoin)
+                location, 
+                term,     
+                limit: 10,
             },
         });
 
