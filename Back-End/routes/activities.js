@@ -9,11 +9,11 @@ const YELP_BASE_URL = 'https://api.yelp.com/v3/businesses/search';
 
 // Endpoint pour récupérer des activités
 router.get('/yelp-activities', async (req, res) => {
-    const { location, term } = req.query; // Paramètres envoyés par le frontend
+    const { location, term } = req.query; 
     try {
         const response = await axios.get(YELP_BASE_URL, {
             headers: { Authorization: `Bearer ${YELP_API_KEY}` },
-            params: { location, term: term || 'activities' }, // term = activité à rechercher
+            params: { location, term: term || 'activities' }, 
         });
         res.json(response.data.businesses); // Envoyer les résultats au frontend
     } catch (error) {
